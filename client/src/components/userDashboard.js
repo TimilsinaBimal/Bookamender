@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
-import store from '../store';
-import {loadUser} from '../actions/authActions';
+import AppNavBar from './AppNavBar';
 
 class UserDashboard extends Component {
-    componentDidMount(){
-        store.dispatch(loadUser());
-    }
     render() {
         return (
             <div>
+                <AppNavBar/>
                 <h2>User dashboard</h2>
             </div>
         )

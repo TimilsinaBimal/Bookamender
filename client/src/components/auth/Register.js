@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Button, Form, FormGroup, Label, Input, Alert} from 'reactstrap';
 import {register} from '../../actions/authActions';
 import React, { Component } from 'react'
+import AppNavBar from '../AppNavBar';
 
 class RegisterForm extends Component {
   state = {
@@ -50,10 +51,11 @@ class RegisterForm extends Component {
 
     render() {
         return (
+    <div>
+      <AppNavBar/>
     <div className="container h-100">
     <div className="row h-100">
       <div className="row h-100">
-      
         <Form className="col justify-content-center align-items-center" onSubmit= {this.onSubmit}>
         <h2> Register </h2>
         {this.state.msg ? <Alert color="danger">{ this.state.msg }</Alert>: null}
@@ -73,6 +75,7 @@ class RegisterForm extends Component {
       </Form>
       </div>
     </div>
+  </div>
   </div>
         )
     }

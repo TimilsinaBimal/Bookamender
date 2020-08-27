@@ -6,10 +6,10 @@ const jwt = require('jsonwebtoken');
 const auth = require('../middleware/auth');
 
 //user login
-router.get('/user/login', (req, res) =>{
-    User.find()
-        .then(user => res.json(user));
-});
+// router.get('/user/login', (req, res) =>{
+//     User.find()
+//         .then(user => res.json(user));
+// });
 
 router.post('/user/login', (req, res) =>{
     const {email, password} = req.body;
@@ -111,7 +111,14 @@ router.post('/user/register', (req, res) =>{
 
 //user dashboard
 router.get("/user/dashboard", auth, (req, res) =>{
-    res.send("This is the user dashboard");
+    res.json({
+        token,
+        user: {
+        id: user.id,
+        name: user.name,
+        email: user.email
+        }
+    })
 });
 
 module.exports = router;

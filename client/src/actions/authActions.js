@@ -12,6 +12,8 @@ import {
     REGISTER_FAIL
 } from './types';
 
+
+
 //load user
 export const loadUser = () => (dispatch, getState) => {
     dispatch({type: USER_LOADING});
@@ -71,6 +73,7 @@ export const login = ({email, password}) => dispatch =>{
                 type: LOGIN_FAIL
             });
         });
+
 }
 
 

@@ -1,9 +1,12 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
+import AppNavBar from '../AppNavBar';
 
 const LibrarianLoginForm = (props) => {
   return (
-    <div className="container h-100">
+    <div>
+      <AppNavBar/>
+      <div className="container h-100">
     <div className="row h-100">
       <div className="row h-100">
         <Form className="col justify-content-center align-items-center">
@@ -21,6 +24,9 @@ const LibrarianLoginForm = (props) => {
       </div>
     </div>
   </div>
+
+    </div>
+    
   );
 }
 

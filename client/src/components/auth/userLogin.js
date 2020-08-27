@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Button, Form, FormGroup, Label, Input, Alert} from 'reactstrap';
 import {login, loadUser} from '../../actions/authActions';
 import React, { Component } from 'react';
+import AppNavBar from '../AppNavBar';
 
 class LoginForm extends Component {
   state = {
@@ -46,10 +47,14 @@ class LoginForm extends Component {
     };
     
     this.props.login(user);
+
   }
 
     render() {
         return (
+         <div>
+           <AppNavBar/>
+         
     <div className="container h-100">
     <div className="row h-100">
       <div className="row h-100">
@@ -70,6 +75,7 @@ class LoginForm extends Component {
       </div>
     </div>
   </div>
+  </div> 
         )
     }
 }

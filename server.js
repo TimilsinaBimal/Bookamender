@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const user_route = require('./routes/user');
+const librarian_route = require('./routes/librarian');
 const morgan = require("morgan");
 const app = express();
 
@@ -9,7 +10,8 @@ app.use(bodyParser.json());
 app.use(morgan("dev"));
 
 //routes for user
-app.use(user_route);
+app.use('/user', user_route);
+app.use('/librarian', librarian_route);
 //app.use('/auth', require('./routes/authenticate'));
 
 //port to listen
