@@ -1,6 +1,6 @@
 import React from 'react';
 import AppNavBar from './AppNavBar';
-import Jombotron from './jombotron';
+import Slide from './carousel';
 import {Button} from 'reactstrap';
 import {Link} from 'react-router-dom';
 
@@ -19,7 +19,12 @@ function Home() {
           <Link to="/librarian/login"><Button color="primary">Librarian</Button></Link>
           </div>
           </div>
-          <Jombotron/>
+          <div className="container w-100 h-25">
+          <Slide/>
+          </div>
+          
+          
+           
         </div>
         
     )

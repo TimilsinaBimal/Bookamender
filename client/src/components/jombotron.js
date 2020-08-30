@@ -7,7 +7,7 @@ function Jombotron() {
             <Jumbotron>
                 <Container>
                     <h1 className="display-3">Hello User!</h1>
-                    <p className="lead">This is an AI powered library manager that recommends you books automatically.</p>
+                    <p className="lead">"The only thing that you absolutely have to know, is the location of the library."<br/> -Albert Einstein </p>
                 </Container>
             </Jumbotron>
         </div>

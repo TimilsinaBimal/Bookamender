@@ -5,13 +5,7 @@ const config = require('config');
 const jwt = require('jsonwebtoken');
 const auth = require('../middleware/auth');
 
-//user login
-// router.get('/user/login', (req, res) =>{
-//     User.find()
-//         .then(user => res.json(user));
-// });
-
-router.post('/user/login', (req, res) =>{
+router.post('/login', (req, res) =>{
     const {email, password} = req.body;
 
     //validation
@@ -53,9 +47,7 @@ router.post('/user/login', (req, res) =>{
         })
 });
 
-
-
-router.post('/user/register', (req, res) =>{
+router.post('/register', (req, res) =>{
     const {name, email, password} = req.body;
 
     //validation
@@ -109,16 +101,10 @@ router.post('/user/register', (req, res) =>{
         })
 });
 
-//user dashboard
-router.get("/user/dashboard", auth, (req, res) =>{
-    res.json({
-        token,
-        user: {
-        id: user.id,
-        name: user.name,
-        email: user.email
-        }
-    })
-});
+router.get('/auth', auth, (req, res) =>{
+    User.findById(req.user.id)
+    .select('-password')
+    .then(user => res.json(user));
+})
 
 module.exports = router;
