@@ -6,7 +6,7 @@ function Jombotron() {
         <div>
             <Jumbotron>
                 <Container>
-                    <h1 className="display-3">Hello User!</h1>
+                    <h1 className="display-5">Hello User!</h1>
                     <p className="lead">"The only thing that you absolutely have to know, is the location of the library."<br/> -Albert Einstein </p>
                 </Container>
             </Jumbotron>

@@ -8,3 +8,9 @@ export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
 export const REGISTER_FAIL = "REGISTER_FAIL";
 export const GET_ERRORS = "GET_ERRORS";
 export const CLEAR_ERRORS = "CLEAR ERRORS";
+export const GET_BOOKS = "GET_BOOKS";
+export const ADD_BOOKS = "ADD_BOOKS";
+export const DELETE_BOOKS = "DELETE_BOOKS";
+export const GET_USERS = "GET_USERS";
+export const DELETE_USER = "DELETE_USER";
+

@@ -12,7 +12,7 @@ class LoginForm extends Component {
     msg: null
   };
 
-  static propTypes = {
+ static propTypes = {
     isauthenticated: PropTypes.bool,
     error: PropTypes.object.isRequired,
     login: PropTypes.func.isRequired,

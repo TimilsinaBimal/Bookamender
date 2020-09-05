@@ -12,13 +12,11 @@ import {
     REGISTER_FAIL
 } from './types';
 
-
-
 //load user
 export const loadUser = () => (dispatch, getState) => {
     dispatch({type: USER_LOADING});
     
-    axios.get('/user/dashboard', tokenConfig(getState))
+    axios.get('/user/auth', tokenConfig(getState))
         .then(res => dispatch({
             type: USER_LOADED,
             payload: res.data
@@ -39,6 +37,7 @@ export const register = ({name, email, password}) => dispatch =>{
         }
     }
     const body = JSON.stringify({name, email, password});
+
 
     axios.post('/user/register', body, config)
         .then(res => dispatch({
@@ -75,9 +74,6 @@ export const login = ({email, password}) => dispatch =>{
         });
 
 }
-
-
-
 
 export const tokenConfig = getState =>{
     //get token

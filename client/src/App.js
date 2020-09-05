@@ -8,15 +8,13 @@ import store from './store';
 import Home from './components/home';
 import UserDashboard from './components/userDashboard';
 import LibrarianDashboard from './components/librarianDashboard';
-// import { loadUser } from './actions/authActions';
+import LibrarianJournals from './components/librarianJournals';
+import LibrarianUsers from './components/librarianUsers';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-
 import './App.css';
 
 class  App extends Component {
-  // componentDidMount(){
-  //   store.dispatch(loadUser());
-  // }
+
   render(){
     return (
       <Provider store={store}>
@@ -29,6 +27,8 @@ class  App extends Component {
             <Route path="/user/dashboard" component={UserDashboard} exact />
             <Route path="/librarian/login" component={LibrarianLoginForm} exact />
             <Route path="/librarian/dashboard" component={LibrarianDashboard} exact />
+            <Route path="/librarian/journals" component={LibrarianJournals} exact />
+            <Route path="/librarian/users" component={LibrarianUsers} exact />
           </Switch>
         </Router>
       </div>

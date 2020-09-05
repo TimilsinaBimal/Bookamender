@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const Librarian = require('../models/user_db');
+const Book = require('../models/book_db');
+const User = require('../models/user_db');
 const bcrypt = require('bcryptjs');
 const config = require('config');
 const jwt = require('jsonwebtoken');
@@ -46,5 +48,50 @@ router.post('/librarian/login', (req, res) =>{
             })
         })
 });
+
+//get books
+router.get('/dashboard', (req, res) =>{
+    Book.find()
+        .sort({date: -1})
+        .then(books => res.json(books))
+});
+
+//post book
+router.post('/dashboard', (req, res) =>{
+    const {title, isbn, author, publisher} = req.body;
+
+    const newBook = new Book({
+        title,
+        isbn,
+        author,
+        publisher
+    });
+    newBook.save()
+        .then(book => res.json(book));
+});
+
+//delete book
+router.delete('/dashboard/:id', (req, res) =>{
+    Book.findById(req.params.id)
+        .then(item => item.remove()
+            .then(() => res.json({success: true}))
+        ).catch(err => res.status(404).json({success: false}));
+});
+
+//get user
+router.get('/users', (req, res) =>{
+    User.find()
+        .sort({date: -1})
+        .then(users => res.json(users))
+})
+
+//delete user
+router.delete('/users/:id', (req, res) =>{
+    User.findById(req.params.id)
+        .then(item => item.remove()
+            .then(() => res.json({success: true}))
+        ).catch(err => res.status(404).json({success: false}));
+});
+
 
 module.exports = router;
