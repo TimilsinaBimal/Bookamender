@@ -1,4 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://shirish:mongo2020@bookamender.lvuw2.mongodb.net/Bookamender?retryWrites=true&w=majority",
+    "mongoURI": "mongodb+srv://shirish:@bookamender.lvuw2.mongodb.net/Bookamender?retryWrites=true&w=majority",
     "jwtSecret": "book_Secret"
 }
