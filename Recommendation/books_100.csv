@@ -1,0 +1,101 @@
+book_id,books_count,isbn,authors,original_publication_year,original_title,language_code,rating_count,average_rating,ratings_1,ratings_2,ratings_3,ratings_4,ratings_5
+4529,36,067002497X,"Philip Pullman, Jacob Grimm, Wilhelm Grimm",2012.0,Grimm Tales for Young and Old,eng,35,4.09,0,0,9,14,12
+4707,25,60987464,"Marilyn Manson, Neil Strauss",1998.0,The Long Hard Road Out of Hell,eng,29,3.62,1,3,8,11,6
+4732,21,1416527265,Hester Browne,2005.0,The Little Lady Agency,eng,34,3.62,1,3,9,16,5
+4963,64,552150215,John Katzenbach,2002.0,The Analyst,eng,22,3.86,1,1,5,8,7
+5280,26,62295896,Kim Gordon,2015.0,Girl in a Band,eng,20,3.45,2,2,4,9,3
+5399,45,067974472X,"James     Baldwin, Kıvanç Güney",1963.0,The Fire Next Time,eng,38,4.39,0,1,3,14,20
+5819,63,1471110672,Tom Rob Smith,2014.0,The Farm,eng,32,3.62,1,2,11,12,6
+5822,95,316044776,"Carlos Ruiz Zafón, Lucia Graves",1986.0,El príncipe de la niebla,eng,24,3.67,0,3,8,7,6
+5994,51,9580469717,Carlos Fuentes,1962.0,Aura,eng,24,3.71,1,2,7,7,7
+6025,85,752852612,Dashiell Hammett,1929.0,Red Harvest,eng,37,3.97,0,2,8,16,11
+6076,71,440240948,Conn Iggulden,2002.0,The Gates of Rome,eng,34,3.94,1,1,7,15,10
+6241,36,1101875100,Patti Smith,2015.0,M Train,eng,27,3.78,0,4,4,13,6
+6283,43,99468387,Ian McEwan,1978.0,The Cement Garden,eng,41,3.63,1,2,14,18,6
+6295,27,143036424,Craig Johnson,2004.0,The Cold Dish,eng,30,3.9,0,0,7,19,4
+6300,46,552772291,Madeleine Wickham,2001.0,Sleeping Arrangements,eng,30,3.5,1,5,8,10,6
+6399,71,6178715,Sidney Sheldon,1992.0,The Stars Shine Down,eng,34,3.38,1,1,19,10,3
+6494,26,425240169,Julie James,2011.0,A Lot Like Love,eng,33,4.06,0,1,5,18,9
+6544,33,307381757,Michelle Moran,2008.0,The Heretic Queen,eng,33,3.97,0,1,8,15,9
+6564,38,446556246,Sebastian Junger,2010.0,WAR,eng,26,4.0,0,1,6,11,8
+6571,41,399256199,John Flanagan,2011.0,The Outcasts,eng,30,4.03,0,2,6,11,11
+6673,37,345379071,David Gemmell,1986.0,Waylander ,eng,29,4.07,0,2,3,15,9
+6770,32,60875070,Heather O'Neill,2006.0,Lullabies for Little Criminals,eng,24,3.75,1,1,7,9,6
+6809,55,1400096936,Don Winslow,2005.0,The Power of the Dog,eng,29,4.52,0,1,1,9,18
+6836,41,743474171,Judith McNaught,1993.0,Perfect,eng,28,4.43,0,0,3,10,15
+6844,54,140115854,Paul Auster,1989.0,Moon Palace,eng,27,4.19,0,0,4,14,9
+6867,22,143039652,"R.K. Narayan, Jhumpa Lahiri",1943.0,Malgudi Days,eng,24,4.08,0,0,6,10,8
+6883,43,452297648,Natasha Solomons,2011.0,The House at Tyneford,eng,40,3.6,0,5,12,17,6
+6895,26,1400095565,Dave Eggers,2005.0,How We Are Hungry,eng,20,3.65,0,1,7,10,2
+7023,25,1416918736,Kate Brian,2006.0,Private,eng,24,3.54,2,3,5,8,6
+7033,25,1466867507,Jeffrey Archer,2016.0,Cometh the Hour,eng,20,3.85,1,0,5,9,5
+7035,30,575099127,Alastair Reynolds,2008.0,House of Suns,eng,34,4.24,0,0,5,16,13
+7147,86,1933633638,"Hans Fallada, Michael Hofmann, Geoff Wilkes",1947.0,Jeder stirbt für sich allein,eng,21,3.86,0,3,4,7,7
+7279,47,307957241,Oliver Sacks,1995.0,Hallucinations,eng,26,3.65,1,2,8,9,6
+7300,35,553805444,"George R.R. Martin, Elio M. García Jr., Linda Antonsson",2014.0,The World of Ice and Fire,eng,25,4.2,0,0,4,12,9
+7311,59,312421990,Zoë Heller,2003.0,Notes on a Scandal,eng,31,3.48,0,3,13,12,3
+7397,42,1594487294,Mohsin Hamid,2013.0,How to Get Filthy Rich in Rising Asia,eng,28,3.46,1,3,9,12,3
+7422,24,006082543X,"Neil Gaiman, P. Craig Russell",2008.0,Coraline,eng,34,3.62,1,2,13,11,7
+7439,46,1405092726,C.J. Sansom,2008.0,Revelation,eng,19,4.0,1,0,3,9,6
+7444,179,198245971,"Georg Wilhelm Friedrich Hegel, A.V. Miller, John Niemeyer Findlay",1807.0,Phänomenologie des Geistes,eng,25,3.84,0,3,6,8,8
+7447,25,373776578,Gena Showalter,2012.0,The Darkest Seduction,eng,29,4.1,0,3,5,7,14
+7449,44,805090800,Paul Auster,2009.0,Invisible,eng,19,3.37,2,3,1,12,1
+7474,46,345539478,Karin Slaughter,2013.0,Unseen,eng,37,3.7,0,2,12,18,5
+7491,38,1400079446,Alexander McCall Smith,2005.0,44 Scotland Street,eng,23,3.61,0,3,6,11,3
+7539,50,006137587X,"Sarah Prineas, Antonio Javier Caparo",2008.0,The Magic Thief,eng,26,4.0,0,0,8,10,8
+7589,48,671720147,Lois McMaster Bujold,1990.0,The Vor Game,eng,41,4.37,0,0,4,18,19
+7638,28,1597800449,Iain M. Banks,2004.0,The Algebraist,eng,34,4.12,1,1,6,11,15
+7673,43,1439138338,Colm Tóibín,2014.0,Nora Webster,eng,34,3.5,2,1,11,18,2
+7699,21,312591837,Jane Green,2013.0,Family Pictures,eng,22,3.68,0,3,6,8,5
+7724,47,312937660,Matthew Reilly,2003.0,Scarecrow,eng,22,3.73,0,2,8,6,6
+7783,219,679731210,"Giuseppe Tomasi di Lampedusa, Archibald Colquhoun",1958.0,Il Gattopardo,eng,31,3.61,1,2,11,11,6
+7824,36,380803240,Raymond E. Feist,2002.0,Talon of the Silver Hawk,eng,27,4.11,0,0,6,12,9
+7855,87,61043559,Dorothy L. Sayers,1933.0,Murder Must Advertise,eng,29,4.48,0,0,3,9,17
+7882,36,174275001X,Deborah Rodriguez,2011.0,A Cup of Friendship,eng,15,3.27,2,0,6,6,1
+7890,41,037377138X,Jennifer Crusie,1996.0,Anyone But You ,eng,27,3.89,0,1,9,9,8
+7925,26,152010661,"Mem Fox, Jane Dyer",1993.0,Time for Bed,eng,40,4.12,2,3,4,10,21
+8012,71,743268571,Mary Higgins Clark,2007.0,I Heard That Song Before,eng,35,3.66,1,1,11,18,4
+8060,41,345528921,Debbie Macomber,2012.0,The Inn At Rose Harbor,eng,24,3.54,0,2,12,5,5
+8115,119,140248927,"Mario Vargas Llosa, Helen R. Lane",1977.0,La tía Julia y el escribidor,eng,23,3.96,0,2,6,6,9
+8425,37,553803190,Connie Willis,2010.0,Blackout,eng,28,3.93,1,2,4,12,9
+8443,29,1606840584,Bree Despain,2010.0,The Lost Saint,eng,21,3.67,0,5,3,7,6
+8456,85,60997028,"Milan Kundera, Aaron Asher",1969.0,Život je jinde,eng,29,4.1,0,2,6,8,13
+8462,23,545415071,Meg Cabot,2012.0,Underworld,eng,28,3.71,0,2,9,12,5
+8544,32,307459659,"Christopher Chabris, Daniel Simons",2010.0,The Invisible Gorilla,eng,15,3.8,0,0,5,8,2
+8580,22,1555977073,Maggie Nelson,2015.0,The Argonauts,eng,16,4.19,0,0,2,9,5
+8588,25,140097317,Paul Auster,1985.0,City of Glass,eng,31,3.65,0,4,9,12,6
+8628,39,1250067847,Gregg Hurwitz,2016.0,Orphan X,eng,20,3.8,0,2,5,8,5
+8644,34,1846058317,"James Patterson, Mark Pearson",2011.0,Private London,eng,32,3.5,0,5,11,11,5
+8685,30,125011117X,Sarah Pinborough,2017.0,Behind Her Eyes,eng,18,3.94,1,0,3,9,5
+8712,59,1419717014,Jeff Kinney,2015.0,Old School,eng,10,3.9,0,1,2,4,3
+8814,36,786886323,Glen David Gold,2001.0, Carter Beats the Devil,eng,30,3.93,0,2,7,12,9
+8830,67,743484355,Mary Higgins Clark,1982.0,A Cry in the Night,eng,40,3.4,0,7,15,13,5
+8872,60,743430336,Julie Garwood,2001.0,Mercy,eng,34,3.97,0,1,8,16,9
+8923,59,375719202,John O'Hara,1933.0,Appointment in Samarra,eng,21,3.67,1,2,6,6,6
+8960,36,385535775,Mark Haddon,2012.0,The Red House,eng,26,2.73,3,4,16,3,0
+8985,46,055380717X,Linwood Barclay,2010.0,Never Look Away,eng,16,3.75,1,1,4,5,5
+9003,32,1416984488,Rick Yancey,2009.0,The Monstrumologist,eng,26,3.73,0,4,6,9,7
+9036,24,142003808,"T.C. Boyle, Richard Poe",2003.0,Drop City,eng,26,3.85,0,2,9,6,9
+9114,87,040405109X,Edgar Allan Poe,1849.0,The Complete Tales and Poems of Edgar Allan Poe,eng,25,4.4,0,0,2,11,12
+9140,30,553806610,Kelley Armstrong,2008.0,Personal Demon,eng,21,4.1,0,1,4,8,8
+9148,28,821780654,Jacquelyn Frank,2006.0,Jacob,eng,21,4.0,2,0,2,9,8
+9196,33,452298385,Sarah Jio,2012.0,Blackberry Winter,eng,27,3.78,0,2,8,11,6
+9199,55,345476131,Steve Berry,2005.0,The Third Secret,eng,22,3.59,0,4,5,9,4
+9267,45,316010367,Anita Shreve,2003.0,All He Ever Wanted,eng,38,3.16,3,3,21,7,4
+9281,190,521010756,"Aeschylus, Judith Affleck, Philip de May, Patricia E. Easterling, John     Harrison",-458.0,Ἀγαμέμνων,eng,30,4.0,0,1,6,15,8
+9303,82,374521506,"Roland Barthes, Annette Lavers",1957.0,Mythologies,eng,20,4.35,0,0,3,7,10
+9330,43,345484118,Terry Brooks,2007.0,The Elves of Cintra ,eng,34,3.94,0,2,8,14,10
+9346,30,61351520,Susan Elizabeth Phillips,2010.0,Call Me Irresistible,eng,29,3.97,0,2,6,12,9
+9400,174,7120710,Agatha Christie,1940.0,Sad Cypress,eng,36,3.75,0,5,10,10,11
+9488,29,399164448,J.D. Robb,2014.0,Festive in Death,eng,27,4.07,0,0,9,7,11
+9500,46,312656289,Alexandra Adornetto,2012.0,Heaven,eng,18,3.83,0,1,8,2,7
+9530,53,312939167,M.C. Beaton,1992.0,Agatha Raisin and the Quiche of Death,eng,14,3.43,0,1,6,7,0
+9533,21,802141900,Sherman Alexie,1995.0,Reservation Blues,eng,22,3.86,0,1,5,12,4
+9603,22,758220367,Shelly Laurenston,2007.0,The Mane Event,eng,15,4.33,0,0,0,10,5
+9699,50,553286285,Isaac Asimov,1989.0,Nemesis,eng,22,3.64,0,0,11,8,3
+9719,46,340895934,Jojo Moyes,2007.0,Silver Bay,eng,26,3.42,1,0,14,9,2
+9794,54,7154615,Carol Shields,2002.0,Unless,eng,28,3.57,2,2,9,8,7
+9837,24,525426035,Andrew  Smith,2014.0,Grasshopper Jungle,eng,21,3.76,1,1,7,5,7
+9882,24,1481422340,Scott Westerfeld,2014.0,Afterworlds,eng,27,3.7,0,2,6,17,2
+9897,22,1416927247,Robert Muchamore,2006.0,Divine Madness,eng,14,4.14,0,2,1,4,7
+9988,44,674017722,John Rawls,1971.0,A Theory of Justice,eng,16,4.19,0,0,3,7,6
