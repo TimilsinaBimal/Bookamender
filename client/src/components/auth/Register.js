@@ -14,7 +14,7 @@ class RegisterForm extends Component {
   };
 
   static propTypes = {
-    isauthenticated: PropTypes.bool,
+    isauthenticated: PropTypes.bool.isRequired,
     error: PropTypes.object.isRequired,
     register: PropTypes.func.isRequired
   };

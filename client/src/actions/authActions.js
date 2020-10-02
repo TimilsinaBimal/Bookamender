@@ -1,15 +1,14 @@
 import axios from 'axios';
 import { returnErrors } from './errorActions';
-
 import {
-    USER_LOADED,
     USER_LOADING,
+    USER_LOADED,
     AUTH_ERROR,
     REGISTER_SUCCESS,
     LOGIN_FAIL,
     LOGIN_SUCCESS,
-    // LOGOUT_SUCCESS,
-    REGISTER_FAIL
+    REGISTER_FAIL,
+    LOGOUT_SUCCESS
 } from './types';
 
 //load user
@@ -75,6 +74,7 @@ export const login = ({email, password}) => dispatch =>{
 
 }
 
+
 export const tokenConfig = getState =>{
     //get token
     const token = getState().auth.token;
@@ -92,4 +92,9 @@ export const tokenConfig = getState =>{
     return config;
 }
 
+export const logout = () =>{
+    return {
+        type: LOGOUT_SUCCESS
+    }
+}
 

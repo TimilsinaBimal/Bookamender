@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component} from 'react';
 import {
     Collapse,
     Navbar,
@@ -9,6 +9,7 @@ import {
     NavLink,
     Container
 } from 'reactstrap';
+import Logout from './auth/logout';
 
 class AppNavBar extends Component {
     constructor(props){
@@ -21,23 +22,27 @@ class AppNavBar extends Component {
             isOpen: !this.state.isOpen
         });
     }
+
     render(){
         return(
-        <div>
+        <div className="sticky-top">
             <Navbar color="dark" dark expand="sm" className = "mb-5">
                 <Container>
                     <NavbarBrand href='/'>Bookamender</NavbarBrand>
                     <NavbarToggler onClick={this.toggle}/>
                     <Collapse isOpen={this.state.isOpen} navbar>
-                        <Nav className="mr-auto" navbar>
+                        <Nav navbar>
                             <NavItem>
                                 <NavLink href="/">Home</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/">About</NavLink>
+                                <NavLink href="/user/login">User</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/">Contact</NavLink>
+                                <NavLink href="/librarian/login">Librarian</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <Logout />
                             </NavItem>
                         </Nav>
                     </Collapse>

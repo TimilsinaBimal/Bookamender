@@ -7,7 +7,7 @@ const mongoURI = config.get('mongoURI');
 //connect to the database
 mongoose
     .connect(mongoURI, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
-    .then(() => console.log("Database connected!!!"))
+    .then(() => console.log("User database connected!!!"))
     .catch(err => console.log(err));
 
 // make user schema

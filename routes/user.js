@@ -1,9 +1,12 @@
 const router = require('express').Router();
 const User = require('../models/user_db');
+const Book = require('../models/book_db');
+const Loan = require('../models/loan_db');
 const bcrypt = require('bcryptjs');
 const config = require('config');
 const jwt = require('jsonwebtoken');
 const auth = require('../middleware/auth');
+const { BOOK_LOAN } = require('../client/src/actions/types');
 
 router.post('/login', (req, res) =>{
     const {email, password} = req.body;
@@ -35,7 +38,7 @@ router.post('/login', (req, res) =>{
                         if(err) throw err;
                         res.json({
                             token,
-                            user: {
+                            user:{
                             id: user.id,
                             name: user.name,
                             email: user.email
@@ -106,5 +109,44 @@ router.get('/auth', auth, (req, res) =>{
     .select('-password')
     .then(user => res.json(user));
 })
+
+router.get('/dashboard', (req, res) =>{
+    Book.find()
+        .sort({average_rating: -1})
+        .then(books => res.json(books))
+})
+
+// router.get('/books/:category', (req, res) =>{
+//     console.log(category)
+//     Book.find({category: req.params.category})
+//       .then(books => res.json(books))
+// })
+
+router.get('/books', async (req, res) =>{
+    const searchKeyword = req.query.searchKeyword
+    ? {
+        original_title:{
+            $regex: req.query.searchKeyword,
+            $options: 'i'
+        },
+    } : {};
+
+    const books = await Book.find({...searchKeyword});
+    res.json(books);
+})
+
+router.get('/book/:id', async (req, res) =>{
+        const book = await Book.find({_id: req.params.id});
+        res.json(book);
+    })
+
+router.post('/loan', async (req, res) =>{
+    const id = req.body.id;
+    const book = await Book.findById(id);
+    const newLoan = new Loan(book);
+    newLoan.save();
+
+    
+});
 
 module.exports = router;

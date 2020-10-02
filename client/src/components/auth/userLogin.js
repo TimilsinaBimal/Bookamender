@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Button, Form, FormGroup, Label, Input, Alert} from 'reactstrap';
 import {login, loadUser} from '../../actions/authActions';
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import AppNavBar from '../AppNavBar';
 
 class LoginForm extends Component {
@@ -13,7 +14,7 @@ class LoginForm extends Component {
   };
 
  static propTypes = {
-    isauthenticated: PropTypes.bool,
+    isauthenticated: PropTypes.bool.isRequired,
     error: PropTypes.object.isRequired,
     login: PropTypes.func.isRequired,
     loadUser: PropTypes.func.isRequired
@@ -38,16 +39,25 @@ class LoginForm extends Component {
 
   onSubmit = e =>{
     e.preventDefault();
-    
+    const {isauthenticated} = this.props;
     const {email, password} = this.state;
 
     const user = {
       email,
       password
     };
-    
+
     this.props.login(user);
 
+    console.log(isauthenticated);
+    
+    if(isauthenticated){
+      this.props.history.push('/user/dashboard');
+    }
+    else{
+      this.props.history.push('/user/login');
+    }
+    
   }
 
     render() {
@@ -55,7 +65,7 @@ class LoginForm extends Component {
          <div>
            <AppNavBar/>
          
-    <div className="container h-100">
+    <div className="container ">
     <div className="row h-100">
       <div className="row h-100">
      
@@ -71,7 +81,9 @@ class LoginForm extends Component {
         <Input type="password" name="password" id="password" placeholder="Password" onChange={this.onChange} />
       </FormGroup>
       <Button> Login </Button>
+      <p>Don't have an account? <Link to="/user/register">Register Here!</Link></p>
       </Form>
+      
       </div>
     </div>
   </div>
@@ -81,7 +93,7 @@ class LoginForm extends Component {
 }
 
 const mapStateToProps = state =>({
-  isauthenticated: state.auth.isauthenticated,
+  isauthenticated: state.auth.isAuthenticated,
   error: state.error
 });
 

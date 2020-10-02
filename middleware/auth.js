@@ -8,8 +8,8 @@ function auth(req, res, next){
     //find token
     if(!token) return res.status(401).json({msg: 'No token passed'});
     try{
-        const decode = jwt.verify(token, config.get('jwtSecret'));
-        req.user = decode;
+        const decoded = jwt.verify(token, config.get('jwtSecret'));
+        req.user = decoded;
         next();
     }catch(e){
         res.status(400).json({msg:"Token invalid"});
