@@ -9,13 +9,22 @@ import {GET_BOOKS,
         SEND_CATEGORY,
         SEND_PREVIEW,
         BOOK_SEARCH, 
-        BOOK_LOAN} from '../actions/types';
+        BOOK_LOAN,
+        GET_LOAN, 
+        REMOVE_LOAN, 
+        BORROWED_BOOK, 
+        GET_BORROWED,
+        GET_EMPLOYEES,
+        ADD_EMPLOYEE,
+        DELETE_EMPLOYEE} from '../actions/types';
 
 const initialState = {
     books: [],
     journals: [],
     users: [],
-    loan: []
+    loan: [],
+    borrowed: [],
+    employee: []
 }
 
 export default function(state = initialState, action) {
@@ -77,8 +86,41 @@ export default function(state = initialState, action) {
             }
         case BOOK_LOAN:
             return{
+                ...state
+            }
+        case GET_LOAN: 
+            return{
                 ...state,
                 loan: action.payload
+            }
+        case REMOVE_LOAN:
+            return{
+                ...state,
+                loan: state.loan.filter(loan => loan._id !== action.payload)
+            }
+        case BORROWED_BOOK:
+            return{
+                ...state
+            }
+        case GET_BORROWED: 
+            return{
+                ...state,
+                borrowed: action.payload
+            }
+        case GET_EMPLOYEES:
+            return{
+                ...state,
+                employee: action.payload
+            }
+        case DELETE_EMPLOYEE:
+            return{
+                ...state,
+                employee: state.employee.filter(employee => employee._id !== action.payload)
+            }
+        case ADD_EMPLOYEE:
+            return{
+                ...state,
+                employee: [...state.employee, action.payload]
             }
         default:
             return state;

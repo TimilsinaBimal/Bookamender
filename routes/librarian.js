@@ -3,6 +3,7 @@ const Librarian = require('../models/librarian_db');
 const Book = require('../models/book_db');
 const Journal = require('../models/journal_db');
 const User = require('../models/user_db');
+const Employee = require('../models/employee_db');
 const bcrypt = require('bcryptjs');
 const config = require('config');
 const jwt = require('jsonwebtoken');
@@ -185,6 +186,36 @@ router.delete('/users/:id', (req, res) =>{
             .then(() => res.json({success: true}))
         ).catch(err => res.status(404).json({success: false}));
 });
+
+//get employee
+router.get('/employee', (req, res) =>{
+    Employee.find()
+        .then(employee => res.json(employee))
+});
+
+//post employee
+router.post('/employee', (req, res) =>{
+    const {name, email, address, phone} = req.body;
+
+    const newEmployee = new Employee({
+       name,
+       email,
+       address,
+       phone
+    });
+
+    newEmployee.save()
+        .then(employee => res.json(employee));
+});
+
+//delete employee
+router.delete('/employee/:id', (req, res) =>{
+    Employee.findById(req.params.id)
+        .then(item => item.remove()
+            .then(() => res.json({success: true}))
+        ).catch(err => res.status(404).json({success: false}));
+});
+
 
 
 module.exports = router;

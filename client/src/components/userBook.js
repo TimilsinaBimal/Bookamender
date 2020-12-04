@@ -7,17 +7,37 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import { getBooks, bookLoan} from '../actions/bookActions'
 import PropTypes from 'prop-types'
+import ReactNotification from 'react-notifications-component';
+import 'react-notifications-component/dist/theme.css'
+import 'animate.css/animate.compat.css'
+import { store } from 'react-notifications-component';
+
 
 class UserBook extends Component{
 
     onLoanClick = (id) =>{
         this.props.bookLoan(id)
+
+        store.addNotification({
+            title: "Book loan registered!!",
+            message: "Go to book loan to see details.",
+            type: "default",
+            insert: "top",
+            container: "top-right",
+            animationIn: ["animate__animated", "animate__fadeIn"],
+            animationOut: ["animate__animated", "animate__fadeOut"],
+            dismiss: {
+              duration: 5000,
+              onScreen: true
+            }
+          });
     }
    
     render(){
         const {books} = this.props.book;
         return(
             <div>
+                <ReactNotification />
                 <AppNavBar/>
                 <div className="container">
                 <Link to='/user/books'><h4>Back</h4></Link>
@@ -32,8 +52,9 @@ class UserBook extends Component{
                     <CardSubtitle>ISBN: {isbn}</CardSubtitle>
                     <CardText>Books Count: {books_count}</CardText>
                     <CardSubtitle>Average Rating: {average_rating}</CardSubtitle>
-                    <button className="btn btn-secondary mr-2">Rate</button>
-                    <button className="btn btn-primary" onClick={this.onLoanClick.bind(this, _id)}>Loan</button>
+                    {/* <input className="mr-2" width="20px" name="rate" value={average_rating} type="number" placeholder="Rate" onChange={this.onChange}/> */}
+                    {/* <button className="btn btn-secondary btn-sm mr-2">Rate</button> */}
+                    <button className="btn btn-primary btn-sm" onClick={this.onLoanClick.bind(this, _id)}>Loan</button>
                     </CardBody>
                </Card>
             ))}

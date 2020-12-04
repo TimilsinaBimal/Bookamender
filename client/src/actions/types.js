@@ -24,4 +24,11 @@ export const SEND_CATEGORY ="SEND_CATEGORY";
 export const SEND_PREVIEW ="SEND_PREVIEW";
 export const BOOK_SEARCH ="BOOK_SEARCH";
 export const BOOK_LOAN ="BOOK_LOAN";
+export const GET_LOAN ="GET_LOAN";
+export const REMOVE_LOAN ="REMOVE_LOAN";
+export const BORROWED_BOOK ="BORROWED_BOOK";
+export const GET_BORROWED ="GET_BORROWED";
+export const GET_EMPLOYEES ="GET_EMPLOYEES";
+export const ADD_EMPLOYEE ="ADD_EMPLOYEE";
+export const DELETE_EMPLOYEE ="DELETE_EMPLOYEE";
 

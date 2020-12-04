@@ -135,6 +135,7 @@ class LibrarianDashboard extends Component {
                         <li class="breadcrumb-item"><a href="/librarian/dashboard">Books</a></li>
                         <li class="breadcrumb-item"><a href="/librarian/journals">Journals</a></li>
                         <li class="breadcrumb-item"><a href="/librarian/users">Users</a></li>
+                        <li class="breadcrumb-item"><a href="/librarian/employee">Employees</a></li>
                     </ol>
                 </nav>
                     <form onSubmit={this.onSearchSubmit} className="form-inline my-2 my-lg-0 justify-content-center">
@@ -226,7 +227,7 @@ class LibrarianDashboard extends Component {
                     <Label for="Average Rating">Average Rating</Label>
                     <Input type="number" name="average_rating" id="average_rating" placeholder="Average Rating" onChange={this.onChange}/>
                 </FormGroup>
-                <Button>Submit</Button>
+                <Button>Save</Button>
                 </Form>
                 </ModalBody>
                 </Modal>
@@ -254,7 +255,7 @@ class LibrarianDashboard extends Component {
                     <td>{books_count}</td>
                     <td>{original_publication_year}</td>
                     <td>yes</td>
-                    <td><Button color="primary" className="btn-sm" onClick={this.onEditClick.bind(this, books)}>Edit</Button></td>
+                    {/* <td><Button color="primary" className="btn-sm" onClick={this.onEditClick.bind(this, books)}>Edit</Button></td> */}
                     <td><Button color="danger" className="btn-sm" onClick={this.onDeleteClick.bind(this, _id)}>Delete</Button></td>
                     </tr> 
                     ))}

@@ -2,19 +2,24 @@ import React, { Component } from 'react';
 import AppNavBar from './AppNavBar';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import {getBorrowed} from '../actions/bookActions';
+import {showLoan, borrowedBook, removeLoan} from '../actions/bookActions';
 import {
     Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle} from 'reactstrap';
   
 
-class UserBorrowed extends Component{
+class UserLoan extends Component{
     componentDidMount(){
-        this.props.getBorrowed();
+        this.props.showLoan();
+    }
+
+    onReceivedClick = (id) =>{
+        this.props.borrowedBook(id);
+        this.props.removeLoan(id);
     }
 
     render(){
-        const {borrowed} = this.props.book;
+        const {loan} = this.props.book;
         return(
             <div>
                 <AppNavBar/>
@@ -24,13 +29,13 @@ class UserBorrowed extends Component{
                         <li class="breadcrumb-item"><a href="/user/dashboard">Dashboard</a></li>
                         <li class="breadcrumb-item"><a href="/user/books">Books</a></li>
                         <li class="breadcrumb-item"><a href="/user/journal">Journals</a></li>
-                        <li class="breadcrumb-item"><a href="/user/loan">Books Loan</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Books Borrowed</li>
+                        <li class="breadcrumb-item active" aria-current="page">Books Loan</li>
+                        <li class="breadcrumb-item"><a href="/user/borrowed">Books Borrowed</a></li>
                     </ol>
                 </nav>
-                <h2>Books Borrowed</h2>
+                <h2>Books Loan</h2>
                 <div className="row mt-5">
-                {borrowed.map(({_id, original_title, authors, original_publication_year, average_rating}) => (
+                {loan.map(({_id, original_title, authors, original_publication_year, average_rating}) => (
                  <div className="shadow p-3 mb-5 mr-5 bg-white rounded col-3">
                  <Card>
                 <CardImg top width="100%" height="300px" src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2017/02/attachment_80004080-e1488217702832.jpg?auto=format&q=60&fit=max&w=930" alt="Book image" />
@@ -38,6 +43,7 @@ class UserBorrowed extends Component{
                 <CardTitle><h5>{original_title}</h5></CardTitle>
                 <CardSubtitle>{authors} {original_publication_year}</CardSubtitle>
                 <CardText>Average Rating: {average_rating}</CardText>
+                <button className="btn btn-danger btn-sm" onClick={this.onReceivedClick.bind(this, _id)}>Received</button>
                 </CardBody>
             </Card>
             </div>
@@ -50,13 +56,16 @@ class UserBorrowed extends Component{
     }
 }
 
-UserBorrowed.propTypes = {
-    borrowed: PropTypes.object.isRequired,
-    getBorrowed: PropTypes.func.isRequired,
+UserLoan.propTypes = {
+    loan: PropTypes.object.isRequired,
+    showLoan: PropTypes.func.isRequired,
+    borrowedBook: PropTypes.func.isRequired,
+    removeLoan: PropTypes.func.isRequired
+    
 }
 
 const mapStateToProps = (state) => ({
     book: state.book
 });
 
-export default connect(mapStateToProps, {getBorrowed})(UserBorrowed);
+export default connect(mapStateToProps, {showLoan, borrowedBook, removeLoan})(UserLoan);

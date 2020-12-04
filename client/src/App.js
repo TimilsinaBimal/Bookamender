@@ -11,19 +11,21 @@ import UserDashboard from './components/userDashboard';
 import UserBooks from './components/userBooks';
 import UserBook from './components/userBook';
 import UserJournal from './components/userJournal';
+import UserLoan from './components/userLoan';
 import UserBorrowed from './components/userBorrowed';
 import LibrarianDashboard from './components/librarianDashboard';
 import LibrarianJournals from './components/librarianJournals';
 import LibrarianUsers from './components/librarianUsers';
+import LibrarianEmployees from './components/librarianEmployee';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
-//import { loadUser } from './actions/authActions';
+import { loadUser } from './actions/authActions';
 
 class  App extends Component {
 
-  //  componentDidMount(){
-  //    store.dispatch(loadUser());
-  //  }
+    componentDidMount(){
+   store.dispatch(loadUser());
+   }
 
   render(){
     return (
@@ -38,12 +40,14 @@ class  App extends Component {
             {/* <Route path="/user/books/:category" component={UserBooks} exact /> */}
             <Route path="/user/books" component={UserBooks} exact />
             <Route path="/user/book/:id" component={UserBook} exact />
-            <Route path="/user/borrowed" component={UserBorrowed} exact />
+            <Route path="/user/loan" component={UserLoan} exact />
             <Route path="/user/journal" component={UserJournal} exact />
+            <Route path="/user/borrowed" component={UserBorrowed} exact />
             <Route path="/librarian/login" component={LibrarianLoginForm} exact />
             <ProtectedRoute path="/librarian/dashboard" component={LibrarianDashboard} exact />
             <Route path="/librarian/journals" component={LibrarianJournals} exact />
             <Route path="/librarian/users" component={LibrarianUsers} exact />
+            <Route path="/librarian/employee" component={LibrarianEmployees} exact />
           </Switch>
         </Router>
       </div>

@@ -12,7 +12,7 @@ app.use(morgan("dev"));
 app.use(router);
 
 //port to listen
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8000;
 
 //listen to local host server
 app.listen(port, () =>{

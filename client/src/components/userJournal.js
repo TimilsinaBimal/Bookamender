@@ -19,6 +19,7 @@ class UserJournal extends Component{
                         <li class="breadcrumb-item"><a href="/user/dashboard">Dashboard</a></li>
                         <li class="breadcrumb-item"><a href="/user/books">Books</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Journal</li>
+                        <li class="breadcrumb-item"><a href="/user/loan">Books Loan</a></li>
                         <li class="breadcrumb-item"><a href="/user/borrowed">Books Borrowed</a></li>
                     </ol>
                 </nav>

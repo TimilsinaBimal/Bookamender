@@ -7,11 +7,11 @@ const mongoURI = config.get('mongoURI');
 //connect to the database
 mongoose
     .connect(mongoURI, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
-    .then(() => console.log("Loan database connected!!!"))
+    .then(() => console.log("Borrowed database connected!!!"))
     .catch(err => console.log(err));
 
 // make Loan schema
-const LoanSchema = new mongoose.Schema({
+const BorrowedSchema = new mongoose.Schema({
     book_id:{
         type: Number,
         required: true
@@ -74,6 +74,6 @@ const LoanSchema = new mongoose.Schema({
     }
 });
 
-const Loan = mongoose.model('Loan', LoanSchema);
+const Borrowed = mongoose.model('Borrowed', BorrowedSchema);
 
-module.exports = Loan;
+module.exports = Borrowed;

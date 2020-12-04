@@ -2,11 +2,11 @@ const router = require('express').Router();
 const User = require('../models/user_db');
 const Book = require('../models/book_db');
 const Loan = require('../models/loan_db');
+const Borrowed = require('../models/borrowed_db');
 const bcrypt = require('bcryptjs');
 const config = require('config');
 const jwt = require('jsonwebtoken');
 const auth = require('../middleware/auth');
-const { BOOK_LOAN } = require('../client/src/actions/types');
 
 router.post('/login', (req, res) =>{
     const {email, password} = req.body;
@@ -140,13 +140,55 @@ router.get('/book/:id', async (req, res) =>{
         res.json(book);
     })
 
-router.post('/loan', async (req, res) =>{
+router.post('/book/:id', async (req, res) =>{
     const id = req.body.id;
     const book = await Book.findById(id);
-    const newLoan = new Loan(book);
+    const newLoan = new Loan({
+        book_id: book.book_id,
+        books_count: book.books_count,
+        isbn: book.isbn,
+        authors: book.authors,
+        original_publication_year: book.original_publication_year,
+        original_title: book.original_title,
+        average_rating: book.average_rating
+    });
     newLoan.save();
-
-    
 });
+
+router.get('/loan', (req, res) =>{
+    Loan.find()
+        .then(loan => res.json(loan));
+})
+
+router.delete('/loan/:id', (req, res) =>{
+    Loan.findById(req.params.id)
+        .then(item => item.remove()
+            .then(() => res.json({success: true}))
+        ).catch(err => res.status(404).json({success: false}));
+});
+
+router.post('/loan', async (req, res) => {
+    try{
+    const book = await Loan.findById(req.body.id);
+    const newBorrowed = new Borrowed({
+        book_id: book.book_id,
+        books_count: book.books_count,
+        isbn: book.isbn,
+        authors: book.authors,
+        original_publication_year: book.original_publication_year,
+        original_title: book.original_title,
+        average_rating: book.average_rating
+    });
+    newBorrowed.save();
+    } catch(error){
+        console.log(error);
+    }
+});
+
+router.get('/borrowed', (req, res) =>{
+    Borrowed.find()
+        .then(books => res.json(books));
+})
+
 
 module.exports = router;

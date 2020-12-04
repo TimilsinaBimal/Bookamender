@@ -64,6 +64,7 @@ class UserDashboard extends Component {
                     <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
                     <li class="breadcrumb-item"><a href="/user/books">Books</a></li>
                     <li class="breadcrumb-item"><a href="/user/journal">Journals</a></li>
+                    <li class="breadcrumb-item"><a href="/user/loan">Books Loan</a></li>
                     <li class="breadcrumb-item"><a href="/user/borrowed">Books Borrowed</a></li>
                 </ol>
             </nav>

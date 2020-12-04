@@ -27,6 +27,7 @@ class LibrarianUsers extends Component {
                         <li class="breadcrumb-item"><a href="/librarian/dashboard">Books</a></li>
                         <li class="breadcrumb-item"><a href="/librarian/journals">Journals</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Users</li>
+                        <li class="breadcrumb-item"><a href="/librarian/employee">Employees</a></li>
                     </ol>
                 </nav>
                 <h2>Users</h2>
